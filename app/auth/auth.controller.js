@@ -7,7 +7,7 @@ angular.module('angularfireSlackApp')
       password: ''
     };
 
-    authCtrl.logic = function(){
+    authCtrl.login = function(){
       Auth.$authWithPassword(authCtrl.user).then(function (auth){
         $state.go('home');
       }, function (error){
